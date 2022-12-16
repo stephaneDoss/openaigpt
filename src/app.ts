@@ -4,7 +4,7 @@ const themesInput = document.querySelector<HTMLInputElement>("#themes");
 const submitButton = document.querySelector<HTMLButtonElement>("button");
 const footer = document.querySelector<HTMLElement>("footer");
 
-const token = "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";
+const token = "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";
 const generatePromptByAgeAndThemes = (age: number, themes = "") => {
   let prompt = `Propose moi, avec un ton joyeux et amical, 5 idées de cadeau pour une personne âgée de ${age} ans`;
 
