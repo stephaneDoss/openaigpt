@@ -9,25 +9,24 @@
   <body class="container">
     <article>
       <header>
-        <h1>Idées kdo !</h1>
-        <p>Recevez des idées de cadeau pour vos proches !</p>
+        <h1>Synonimes et Antonymes</h1>
+        <p>Trouvez le synonime des mots et leur opposé !</p>
       </header>
       <form>
-        <label for="age">Quel âge à la personne ?</label>
-        <input
+        <label for="age">Synonimes et Antonymes ?</label>
+        <select id="age">
+          <option value="antonymes">Antonymes</option>
+          <option value="synonimes">Synonimes</option>
+        </select>
+        <!-- <input
           type="number"
           name=""
           id="age"
           placeholder="Âge de la personne"
-        />
-        <label for="themes">Thèmes que la personne aime ?</label>
-        <input
-          type="text"
-          name=""
-          id="themes"
-          placeholder="Bijoux, sport, légos, cinéma"
-        />
-        <button type="submit">Rechercher 5 idées !</button>
+        /> -->
+        <label for="themes">Quel est votre mot ?</label>
+        <input type="text" name="" id="themes" placeholder="Partir" />
+        <button type="submit">Rechercher des mots !</button>
       </form>
 
       <footer>Remplissez et soumettez le formulaire :)</footer>
