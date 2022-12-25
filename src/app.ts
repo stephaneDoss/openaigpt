@@ -1,10 +1,23 @@
+import dotenv from "dotenv";
+
+let token: string | undefined = "";
+
+if (typeof window === "undefined") {
+  // Cette fonction ne sera exécutée que sur le serveur
+  dotenv.config();
+  const maFonctionServeur = () => {
+    token = process.env.OPENAPI_KEY;
+    console.log(token);
+  };
+  maFonctionServeur();
+}
+
 const form = document.querySelector<HTMLFormElement>("form");
 const ageInput = document.querySelector<HTMLInputElement>("#age");
 const themesInput = document.querySelector<HTMLInputElement>("#themes");
 const submitButton = document.querySelector<HTMLButtonElement>("button");
 const footer = document.querySelector<HTMLElement>("footer");
 
-const token = "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";
 const generatePromptByAgeAndThemes = (choix: string, mot = "") => {
   // let prompt = `Propose moi, avec un ton joyeux et amical, 5 idées de cadeau pour une personne âgée de ${age} ans`;
   let prompt = `Donne moi quelques exemples de ${choix} du mot ${mot}`;
